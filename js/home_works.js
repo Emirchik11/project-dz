@@ -62,6 +62,48 @@ const moveBlock = (x, y, direction) => {
 
 moveBlock(0, 0, 'right');
 
+// Home work 2
 
+const secondsBlock = document.querySelector('#seconds');
+const startBtn = document.querySelector('#start');
+const stopBtn = document.querySelector('#stop');
+const resetBtn = document.querySelector('#reset');
+
+let seconds = 0;
+let interval = null;
+
+const updateSeconds = () => {
+    secondsBlock.textContent = seconds;
+};
+
+
+const startTimer = () => {
+    if (!interval) {
+        interval = setInterval(() => {
+            seconds++;
+            updateSeconds();
+        }, 1000);
+    }
+};
+
+
+const stopTimer = () => {
+    if (interval) {
+        clearInterval(interval);
+        interval = null;
+    }
+};
+
+
+const resetTimer = () => {
+    seconds = 0;
+    updateSeconds();
+    stopTimer();
+};
+
+
+startBtn.addEventListener('click', startTimer);
+stopBtn.addEventListener('click', stopTimer);
+resetBtn.addEventListener('click', resetTimer);
 
 
