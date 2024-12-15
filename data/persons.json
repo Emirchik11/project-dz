@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Isagi",
+    "age": 17,
+    "personPhoto": "https://avatars.dzeninfra.ru/get-zen_doc/9368491/pub_65076b4e6622f50fd0c0e36e_65076c0271fe8c0e0170f1ff/scale_1200"
+  },
+  {
+    "name": "Nagi",
+    "age": 17,
+    "personPhoto": "https://i.pinimg.com/originals/f2/71/47/f27147ba0aceb78502c48d0d234e222a.jpg"
+  },
+  {
+    "name": "Ego",
+    "age": 25,
+    "personPhoto": "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65339bf8d11ae01d2a7b84bf_6533bbd536dbdd2c03fe3fc2/scale_1200"
+  }
+]
