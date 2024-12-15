@@ -144,3 +144,34 @@ const generateCharactersCards = () => {
 };
 
 generateCharactersCards();
+
+// Home work 4 ex 2
+
+
+const loadData = () => {
+    const request = new XMLHttpRequest();
+    const filePath = '../data/homework4Ex2.json'; // Путь к вашему JSON-файлу
+
+    request.open('GET', filePath);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send();
+
+    request.onload = () => {
+        if (request.status === 200) { // Проверяем успешность запроса
+            try {
+                const data = JSON.parse(request.response); // Парсим JSON
+                console.log( data); // Выводим данные в консоль
+            } catch (error) {
+                console.error("Ошибка при парсинге JSON:", error);
+            }
+        } else {
+            console.error(`Ошибка загрузки файла: ${request.status} ${request.statusText}`);
+        }
+    };
+
+    request.onerror = () => {
+        console.error("Ошибка сети. Проверьте подключение.");
+    };
+};
+
+loadData();
