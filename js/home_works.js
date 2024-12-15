@@ -113,21 +113,21 @@ const charactersList = document.querySelector('.characters-list');
 
 const generateCharactersCards = () => {
     const request = new XMLHttpRequest();
-    request.open('GET', './data/persons.json');
+    request.open('GET', '../data/persons.json');
     request.setRequestHeader('Content-type', 'application/json');
     request.send();
-
     request.onload = () => {
         try {
-            // Проверяем, что ответ является валидным JSON
+
             const data = JSON.parse(request.response);
             data.forEach(character => {
                 const characterCard = document.createElement('div');
                 characterCard.classList.add('character-card');
 
-                characterCard.innerHTML = `
+                characterCard.innerHTML =  `
                     <h2>${character.name}</h2>
                     <h4>age: ${character.age}</h4>
+                    <img src="${character.personPhoto}" alt="photo">
                 `;
 
                 charactersList.append(characterCard);
