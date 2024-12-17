@@ -150,17 +150,17 @@ generateCharactersCards();
 
 const loadData = () => {
     const request = new XMLHttpRequest();
-    const filePath = '../data/homework4Ex2.json'; // Путь к вашему JSON-файлу
+    const filePath = '../data/homework4Ex2.json';
 
     request.open('GET', filePath);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send();
 
     request.onload = () => {
-        if (request.status === 200) { // Проверяем успешность запроса
+        if (request.status === 200) {
             try {
-                const data = JSON.parse(request.response); // Парсим JSON
-                console.log( data); // Выводим данные в консоль
+                const data = JSON.parse(request.response);
+                console.log( data);
             } catch (error) {
                 console.error("Ошибка при парсинге JSON:", error);
             }
