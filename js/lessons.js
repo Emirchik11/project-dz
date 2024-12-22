@@ -58,3 +58,63 @@ const converter = (element, targetElement1, targetElement2) => {
 converter(somInput, usdInput, eurInput);
 converter(usdInput, somInput, eurInput);
 converter(eurInput, somInput, usdInput);
+
+
+
+// Card Switcher
+
+const cardBlock = document.querySelector('.card');
+const btnNext = document.querySelector('#btn-next');
+const btnPrev = document.querySelector('#btn-prev');
+
+const total_card = 200;
+let cardId = 1;
+
+const loadCard = (id) => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(res => {
+            if (!res.ok) throw new Error(`Card with ID ${id} not found`);
+            return res.json();
+        })
+        .then(data => {
+            const { title, completed, id } = data;
+            cardBlock.innerHTML = `
+                <p>${title}</p>
+                <p>${completed}</p>
+                <span>${id}</span>
+            `;
+        })
+        .catch(err => {
+            cardBlock.innerHTML = `<p>${err.message}</p>`;
+        });
+};
+
+btnNext.onclick = () => {
+    cardId = cardId < total_card ? cardId + 1 : 1;
+    loadCard(cardId);
+};
+
+btnPrev.onclick = () => {
+    cardId = cardId > 1 ? cardId - 1 : total_card;
+    loadCard(cardId);
+};
+
+loadCard(cardId);
+
+// Fetch запрос
+
+const loadPosts = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => {
+            if (!res.ok) throw new Error('FAIL LOL');
+            return res.json();
+        })
+        .then(posts => {
+            console.log('Posts:', posts);
+        })
+        .catch(err => {
+            console.error('Error FETCH LOL:', err.message);
+        });
+};
+
+loadPosts();
