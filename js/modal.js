@@ -50,8 +50,8 @@ const form = document.querySelector('form')
 const chat_id = '@emir_groop_bot'
 const URL_API = `https://api.telegram.org/bot${token}/sendMessage`
 
-form.onsubmit = (e) => {
-    e.preventDefault()
+form.onsubmit = (event) => {
+    event.preventDefault()
 
     const {name, phone} = Object.fromEntries(new FormData(form).entries())
 
