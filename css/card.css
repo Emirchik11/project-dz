@@ -1,6 +1,10 @@
 .cards {
     background: var(--black);
 }
+.character-card p {
+    color: #ff0000;
+}
+
 
 .cards-list {
     padding: 100px 0;

@@ -1,38 +1,54 @@
 const cardsList1 = document.querySelector('.cards-list');
 
-const generateCards = () => {
-    const request = new XMLHttpRequest();
-    request.open('GET', '../data/persons.json');
-    request.setRequestHeader('Content-type', 'application/json');
-    request.send();
-    request.onload = async () => {
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-            if (!response.ok) {
-                throw new Error('Ошибка при загрузке данных');
-            }
-            const data = JSON.parse(request.response);
-            data.forEach(card => {
-                const Card = document.createElement('div');
-                Card.classList.add('character-card');
+let cardId = 0;
+let blueLock = 0
 
-                Card.innerHTML = `
-                    <h2>${card.name}</h2>
-                    <h4>age: ${card.age}</h4>
-                    <img src="${card.personPhoto}" alt="photo">
-                `;
 
-                cardsList1.append(Card);
-            });
-        } catch (error) {
-        }
-    };
+const generateCards = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const data = await response.json()
+        const {title, body} = data[cardId]
 
-    request.onerror = () => {
-        console.error("Ошибка запроса. Проверьте путь к файлу или настройки сервера.");
-    };
+        const respon = await fetch('../data/persons.json')
+        const info = await respon.json()
+        const {name, age, personPhoto}  = info[blueLock]
+
+
+
+        data.forEach(() => {
+            cardsList1.innerHTML +=`
+                <div class="character-card">
+                 <img src=${personPhoto} alt="">
+                    <h4>${title}</h4>
+                    <p>${body}</p>
+                </div>
+            `
+        })
+
+    }catch (error) {
+        console.log(error)
+    }
+
+
+
+
+
+
 };
 
 generateCards();
+
+const generateImg = async () => {
+        const response = await fetch('../data/persons.json')
+        const data = await response.json()
+        const {personPhoto} = data[blueLock]
+        data.forEach(() => {
+            const img = document.createElement('img')
+            img.src = personPhoto
+
+
+        })
+}
 
 
