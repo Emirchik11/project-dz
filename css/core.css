@@ -11,7 +11,7 @@
 
 body {
     font-family: "Britannic Bold", sans-serif;
-    background: #c2d0d0;
+    background: #a9b5b5;
 }
 
 .btn {
@@ -20,8 +20,8 @@ body {
     font-size: 20px;
     cursor: pointer;
     border: 1px solid var(--orange);
-    background: black;
-    color: var(--orange);
+    background: blue;
+    color: black;
     border-radius: 8px;
 }
 
@@ -77,7 +77,7 @@ h4 {
 }
 
 strong {
-    color: #F79300;
+    color: #00f138;
 }
 
 label {
@@ -104,7 +104,7 @@ input {
     display: block;
     width: 100px;
     height: 100px;
-    background: var(--orange);
+    background: green;
     color: black;
     font-size: 20px;
     text-transform: uppercase;
@@ -120,6 +120,6 @@ input {
 }
 
 :root {
-    --orange: orange;
-    --black: black;
+    --orange: #004ff8;
+    --black: #000000;
 }

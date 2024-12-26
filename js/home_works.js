@@ -113,7 +113,7 @@ const charactersList = document.querySelector('.characters-list');
 
 const generateCharactersCards = () => {
     const request = new XMLHttpRequest();
-    request.open('GET', '../data/persons.json');
+    request.open('GET', '../data/homework4Ex2.json');
     request.setRequestHeader('Content-type', 'application/json');
     request.send();
     request.onload = () => {
@@ -127,7 +127,7 @@ const generateCharactersCards = () => {
                 characterCard.innerHTML =  `
                     <h2>${character.name}</h2>
                     <h4>age: ${character.age}</h4>
-                    <img src="${character.personPhoto}" alt="photo">
+                    <img src="${character.photo}" alt="photo">
                 `;
 
                 charactersList.append(characterCard);

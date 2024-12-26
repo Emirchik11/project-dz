@@ -32,7 +32,24 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+
 }
+
+.logotype {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    height: 60px;
+    width: fit-content;
+    background: var(--orange);
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
 
 /* HEADER MENU */
 
@@ -142,7 +159,7 @@
 }
 
 .slide_card a {
-    color: var(--orange);
+    color: red;
     text-decoration: underline;
 }
 
@@ -238,16 +255,11 @@
     align-items: center;
 }
 
-.bowl {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border: 8px solid transparent;
-    animation: animate 5s linear infinite;
-    transform-origin: bottom center;
-    animation-play-state: run;
+
+.botlle button {
+    margin-left: 1000px;
+    background-color: #000000;
+
 }
 
 @keyframes animate {

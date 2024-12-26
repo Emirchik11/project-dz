@@ -13,5 +13,80 @@
     "name": "Ego",
     "age": 25,
     "personPhoto": "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65339bf8d11ae01d2a7b84bf_6533bbd536dbdd2c03fe3fc2/scale_1200"
+  },
+  {
+    "name": "Bachira",
+    "age": 17,
+    "personPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHGByzfVyocyQYcFFhviE-a6uDKOlasp6OTw&s"
+  },
+  {
+    "name": "Rin",
+    "age": 17,
+    "personPhoto": "https://dere.shikimori.one/uploads/poster/characters/188026/main_2x-24437df62c63f6f753beccfe42e70640.webp"
+  },
+  {
+    "name": "Shidou",
+    "age": 17,
+    "personPhoto": "https://anichars.ru/img/characters/190275.jpg?1690416911"
+  },
+  {
+    "name": "Sae",
+    "age": 19,
+    "personPhoto": "https://static.insales-cdn.com/images/products/1/2638/927271502/RM865-%D0%A1%D0%B0%D1%8D-%D0%98%D1%82%D0%BE%D1%88%D0%B8-_%D0%A1%D0%B8%D0%BD%D1%8F%D1%8F-%D1%82%D1%8E%D1%80%D1%8C%D0%BC%D0%B0_-565%D1%851800-%D0%BC%D0%BC---3.jpg"
+  },
+  {
+    "name": "Chigiri",
+    "age": 17,
+    "personPhoto": "https://upload-os-bbs.hoyolab.com/upload/2024/10/07/371488264/b830c04f1a515e11dd60bc5ddeee3667_2558723757731412743.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70"
+  },
+  {
+    "name": "Karasu",
+    "age": 17,
+    "personPhoto": "https://dere.shikimori.one/uploads/poster/characters/189707/main_2x-cdc3e67a181b7ce4df6de528a3b6e653.webp"
+  },{
+    "name": "Reo",
+    "age": 17,
+    "personPhoto": "https://dere.shikimori.one/uploads/poster/characters/178719/main_2x-6b6813b18a632da2a755c59d107234e5.webp"
+  },{
+    "name": "Hiori",
+    "age": 17,
+    "personPhoto": "https://dere.shikimori.one/uploads/poster/characters/189710/main_2x-66b880cef34c692d7f5a9f9544f4f8e2.webp"
+  },{
+    "name": "Gagamaru",
+    "age": 17,
+    "personPhoto": "https://dere.shikimori.one/system/user_images/original/35473/2343591.jpg"
+  },{
+    "name": "Ikki",
+    "age": 17,
+    "personPhoto": "https://4lit.net/img/82/450582-u_nas_s_toboy_odinakovyie_glaza_tyi_ne_min.jpg"
+  },{
+    "name": "Barou",
+    "age": 17,
+    "personPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWSzj12KrAXl9dXs6Rfshw_gBESJg2vQQMWg&s"
+  },{
+    "name": "Nanase",
+    "age": 17,
+    "personPhoto": "https://nyaa.shikimori.one/uploads/poster/characters/188215/main_alt-3d318b70e75bb78a422f6b44dacb72e3.jpeg"
+  },{
+    "name": "Otoia",
+    "age": 17,
+    "personPhoto": "https://i.pinimg.com/236x/e3/49/98/e349989c7675482091f5570a38fdec75.jpg"
+  },{
+    "name": "Aru",
+    "age": 17,
+    "personPhoto": "https://i.pinimg.com/236x/0f/9d/23/0f9d23ba20ad867ba1f0a0d27cbb8c4e.jpg"
+  },{
+    "name": "Yukimiya",
+    "age": 17,
+    "personPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2S9-Ua-FbqkDmeB8w9Pjt4ede3-wMJ0Mkiw&s"
+  },{
+    "name": "Raichi",
+    "age": 17,
+    "personPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8WJHkVlJV_VZOligsS8pr1sYR64J_aJJ1kw&s"
+  },{
+    "name": "Tokimicy",
+    "age": 17,
+    "personPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQos6jIBjtiqMgRSEoEAlcwpE7g44_Bn3w4Xw&s"
   }
+
 ]

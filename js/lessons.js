@@ -15,6 +15,58 @@ phoneButton.onclick = () => {
         phoneResult.style.color = "red"
     }
 }
+// TAB SLIDERS
+const tabContentBlocks = document.querySelectorAll('.tab_content_block');
+const tabs = document.querySelectorAll('.tab_content_item');
+const tabsParent = document.querySelector('.tab_content_items');
+
+let currentTab = 0;
+let tabSwitchInterval;
+
+const hideTabContent = () => {
+    tabContentBlocks.forEach((block) => (block.style.display = 'none'));
+    tabs.forEach((tab) => tab.classList.remove('tab_content_item_active'));
+};
+
+const showTabContent = (id = 0) => {
+    tabContentBlocks[id].style.display = 'block';
+    tabs[id].classList.add('tab_content_item_active');
+};
+
+const switchTab = () => {
+    currentTab = (currentTab + 1) % tabs.length; // Переключаем индекс
+    hideTabContent();
+    showTabContent(currentTab);
+};
+
+const startAutoSwitch = () => {
+    tabSwitchInterval = setInterval(switchTab, 3000);
+};
+
+const stopAutoSwitch = () => {
+    clearInterval(tabSwitchInterval);
+};
+
+hideTabContent();
+showTabContent();
+startAutoSwitch();
+
+tabsParent.addEventListener('click', (event) => {
+    const clickedTab = event.target.closest('.tab_content_item');
+    if (clickedTab) {
+        const clickedTabIndex = Array.from(tabs).indexOf(clickedTab);
+        if (clickedTabIndex !== -1) {
+            stopAutoSwitch();
+            hideTabContent();
+            currentTab = clickedTabIndex;
+            showTabContent(currentTab);
+            setTimeout(startAutoSwitch, 3000);
+        }
+    }
+});
+
+
+
 
 // CONVERTER
 
@@ -118,3 +170,37 @@ const loadPosts = () => {
 };
 
 loadPosts();
+
+
+// WEATHER
+
+
+const inputSearch = document.querySelector('.cityName');
+const buttonSearch = document.querySelector('#search');
+const city = document.querySelector('.city');
+const temp = document.querySelector('.temp')
+const weatherIcon = document.querySelector('#weather-icon')
+
+const API_URL = 'https://api.openweathermap.org/data/2.5/weather'
+const API_KEY =  'e417df62e04d3b1b111abeab19cea714'
+
+buttonSearch.onclick = () => {
+    fetch(`${API_URL}?appid=${API_KEY}&q=${inputSearch.value}&units=metric&lang=RU`)
+        .then(response => response.json())
+        .then(data => {
+            city.innerHTML = data.name || 'Город не найден'
+            temp.innerHTML = data.main?.temp ? Math.round(data.main?.temp) + '&deg;C' : '-/-/-/-'
+            weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+        })
+    inputSearch.value = ''
+}
+
+// buttonSearch.onclick = () => {
+//     fetch(`${API_URL}?appid=${API_KEY}&q=bishkek`)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data)
+//         })
+// }
+// query params
+
