@@ -76,16 +76,10 @@ const updateSeconds = () => {
     secondsBlock.textContent = seconds;
 };
 
-
 const startTimer = () => {
-    if (!interval) {
-        interval = setInterval(() => {
-            seconds++;
-            updateSeconds();
-        }, 1000);
-    }
+    // Перенаправление на новую страницу
+    window.location.href = 'http://localhost:63342/project%20dz/pages/game.html?_ijt=mulfcobcj1r3n1u87n1hb2dhqk&_ij_reload=RELOAD_ON_SAVE';
 };
-
 
 const stopTimer = () => {
     if (interval) {
@@ -94,12 +88,18 @@ const stopTimer = () => {
     }
 };
 
-
 const resetTimer = () => {
     seconds = 0;
     updateSeconds();
     stopTimer();
 };
+
+// Привязываем обработчики к кнопкам
+startBtn.addEventListener('click', startTimer);
+stopBtn.addEventListener('click', stopTimer);
+resetBtn.addEventListener('click', resetTimer);
+
+
 
 
 startBtn.addEventListener('click', startTimer);

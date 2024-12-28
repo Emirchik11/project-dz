@@ -70,10 +70,12 @@
 
 /* MAIN BLOCK */
 
+
 .main_block {
-    padding: 100px 0;
+    padding: 186px 0;
+
     background: black;
-}
+    background: url(https://cyber.sports.ru/dynamic_images/post/327/746/5/share/22dce9_no_logo_no_text.jpg) }
 
 /* BUTTONS COLOR PICKER */
 
@@ -114,6 +116,8 @@
 .slider_block {
     padding: 100px 0;
     background: black;
+    background: url(https://opis-cdn.tinkoffjournal.ru/mercury/in-out-blue-lock-review.jpg) no-repeat center;
+
 }
 
 .slider {
@@ -147,7 +151,7 @@
 }
 
 .slide_card h3 {
-    color: white;
+    color: #ca0a0a;
     text-transform: uppercase;
     font-size: 22px;
 }
@@ -156,6 +160,7 @@
     font-size: 16px;
     text-align: justify;
     margin: 10px 0;
+    color: black;
 }
 
 .slide_card a {
@@ -170,8 +175,8 @@
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
-    padding: 100px 0;
+    background: url(https://www.kino-teatr.ru/video/16592/start.jpg) no-repeat center;
+    padding: 100px 0 ;
 }
 
 .inner_block_video {

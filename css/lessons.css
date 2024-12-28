@@ -35,22 +35,31 @@
 }
 
 .tab_content_block {
-    width: 700px;
-    border: 1px solid var(--orange);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 170px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: auto; /* Автоматическая высота для размещения текста и изображения */
+    gap: 20px;
+}
+.tab_content_block img {
+    width: 150px; /* Ширина изображения */
+    height: 150px; /* Высота изображения */
+    border-radius: 50%; /* Закругленные края */
+    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+    border: 2px solid var(--orange); /* Оранжевая рамка вокруг изображения */
 }
 
+.tab_content_block div {
+    max-width: calc(100% - 180px); /* Оставляем место для изображения */
+}
+
+
 .tab_content_block p {
-    color: white;
     margin-top: 10px;
     text-align: justify;
+    color: white;
 }
 
 .tab_content_items {

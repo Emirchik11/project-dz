@@ -8,7 +8,7 @@ const regExp = /^\+996 [2579]\d{2} \d{2}-\d{2}-\d{2}$/
 
 phoneButton.onclick = () => {
     if (regExp.test(phoneInput.value)) {
-        phoneResult.innerHTML = "Ok"
+        phoneResult.innerHTML = "ты теперь должен шаурму"
         phoneResult.style.color = "green"
     } else {
         phoneResult.innerHTML = "Invalid phone number"
